@@ -5,11 +5,8 @@ import json
 
 
 def lambda_handler(event, context):
-    
-    print( "Code Running.........")
-    
-
-    league = 'Harbinger'
+	
+    league = event['league']
     want = event['want']
     have = event['have']
     if have == '4':
@@ -22,7 +19,6 @@ def lambda_handler(event, context):
     soup = BeautifulSoup(poe, "html.parser")
 
     listings = soup.find_all('div', class_ = 'displayoffer')
-    print(listings)
     cNames = soup.find_all('div', class_ = 'large-3.small-3.columns.currency')
     jdata = {}
     i = 0
@@ -39,3 +35,4 @@ def lambda_handler(event, context):
         jdata['want'] = curWant
         json_data = json.dumps(jdata)
         print(json_data)
+
