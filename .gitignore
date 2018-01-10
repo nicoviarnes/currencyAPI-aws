@@ -1,3 +1,11 @@
+#BS4
+beautifulsoup4-4.6.0.dist-info
+bs4
+bs4-0.0.1-py3.6.egg-info
+
+#zip for Lambda
+currencyAPI.zip
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
